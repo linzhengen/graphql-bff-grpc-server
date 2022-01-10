@@ -9,7 +9,7 @@ GRPCPLUGIN ?= $(shell go env GOPATH)/bin/protoc-gen-go-grpc
 
 
 # Choose the proto include directory.
-PROTOINCLUDE ?= ./proto_vendor
+PROTOINCLUDE ?= ./submodule/protobuf
 
 # Choose protoc binary
 PROTOC ?= protoc
@@ -47,4 +47,3 @@ init:
 	git submodule --quiet update --init --recursive
 	go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 	go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
-	cd frontend && pnpm install
