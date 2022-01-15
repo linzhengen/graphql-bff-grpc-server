@@ -16,7 +16,9 @@
     "dev": "NODE_ENV=development nodemon --config ./nodemon.json"
   },
   "devDependencies": {
+    "@improbable-eng/grpc-web": "^0.15.0",
     "@types/node": "^14.11.2",
+    "google-protobuf": "^3.19.3",
     "gts": "^3.1.0",
     "nodemon": "^2.0.15",
     "ts-node": "^10.4.0",

@@ -1,8 +1,10 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@improbable-eng/grpc-web': ^0.15.0
   '@types/node': ^14.11.2
   apollo-server: ^3.6.1
+  google-protobuf: ^3.19.3
   graphql: ^16.2.0
   gts: ^3.1.0
   nodemon: ^2.0.15
@@ -15,7 +17,9 @@ dependencies:
   graphql: 16.2.0
 
 devDependencies:
+  '@improbable-eng/grpc-web': 0.15.0_google-protobuf@3.19.3
   '@types/node': 14.18.5
+  google-protobuf: 3.19.3
   gts: 3.1.0_typescript@4.5.4
   nodemon: 2.0.15
   ts-node: 10.4.0_228d16a7acaee6b833b6767fe1bd8bbd
@@ -167,6 +171,15 @@ packages:
 
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
+    dev: true
+
+  /@improbable-eng/grpc-web/0.15.0_google-protobuf@3.19.3:
+    resolution: {integrity: sha512-ERft9/0/8CmYalqOVnJnpdDry28q+j+nAlFFARdjyxXDJ+Mhgv9+F600QC8BR9ygOfrXRlAk6CvST2j+JCpQPg==}
+    peerDependencies:
+      google-protobuf: ^3.14.0
+    dependencies:
+      browser-headers: 0.4.1
+      google-protobuf: 3.19.3
     dev: true
 
   /@josephg/resolvable/1.0.1:
@@ -761,6 +774,10 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       fill-range: 7.0.1
+    dev: true
+
+  /browser-headers/0.4.1:
+    resolution: {integrity: sha512-CA9hsySZVo9371qEHjHZtYxV2cFtVj5Wj/ZHi8ooEsrtm4vOnl9Y9HmyYWk9q+05d7K3rdoAE0j3MVEFVvtQtg==}
     dev: true
 
   /bytes/3.1.1:
