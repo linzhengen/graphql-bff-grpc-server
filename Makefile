@@ -24,7 +24,7 @@ FLAGS+= --go_out=./grpc-server/pb --go-grpc_out=./grpc-server/pb --go-grpc_opt r
 FLAGS+= --js_out="import_style=commonjs,binary:./graphql-bff/src/pb"
 FLAGS+= --ts_out="service=grpc-web:./graphql-bff/src/pb"
 FLAGS+=	--plugin=protoc-gen-grpc=$(GRPCPLUGIN)
-FLAGS+= --plugin="protoc-gen-ts=${PROTOC_GEN_TS_PATH}"
+#FLAGS+= --plugin="protoc-gen-ts=${PROTOC_GEN_TS_PATH}"
 
 SUFFIX:= pb.go
 

@@ -326,3 +326,4 @@ dist
 .idea/codestream.xml
 
 # End of https://www.toptal.com/developers/gitignore/api/go,node,goland,webstorm
+graphql-bff/node_modules/**

@@ -1,14 +1,25 @@
+import "reflect-metadata";
 import {ApolloServer} from 'apollo-server';
-import {typeDefs} from './schema';
-import {resolvers} from './resolvers'
+import * as path from "path";
+import {buildSchema} from "type-graphql";
+import User from './resolvers/user/user'
 
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-});
+async function bootstrap() {
+    // build TypeGraphQL executable schema
+    const schema = await buildSchema({
+        resolvers: [User],
+        // automatically create `schema.gql` file with schema definition in current folder
+        emitSchemaFile: path.resolve(__dirname, "schema.gql"),
+    });
 
-server.listen().then(({url}) => {
-  console.log(`🚀 Server ready at ${url}`);
-});
+    // Create GraphQL server
+    const server = new ApolloServer({
+        schema: schema,
+    });
 
-export default server;
+    // Start the server
+    const {url} = await server.listen(4000);
+    console.log(`Server is running, GraphQL Playground available at ${url}`);
+}
+
+bootstrap();
